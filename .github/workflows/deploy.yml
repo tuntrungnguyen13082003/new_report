@@ -2,7 +2,7 @@ name: Deploy Web
 
 on:
   push:
-    branches: ["main"]  # Nhánh chính của bạn (thường là main hoặc master)
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -17,22 +17,33 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        # 👇 QUAN TRỌNG: Bảo Robot chui vào thư mục Report
+        working-directory: ./Report
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
+          # Chỉ đường dẫn file khóa trong thư mục con
+          cache-dependency-path: Report/package-lock.json
+
       - name: Install dependencies
         run: npm install
+
       - name: Build
         run: npm run build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # Thư mục build của Vite là dist
+          # Lấy kết quả build trong thư mục con
+          path: './Report/dist'
 
   deploy:
     environment:
