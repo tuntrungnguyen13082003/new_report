@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // ĐÃ XÓA DÒNG BASE
-  //base: '/-scene_report/',
+  base: '/-scene_report/',
 })
