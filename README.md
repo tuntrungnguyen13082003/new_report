@@ -13,7 +13,7 @@ Mở file backend_script/Code.js trong GitHub, copy toàn bộ nội dung.
 Dán đè vào trang Google Script vừa mở.
 QUAN TRỌNG: Tìm dòng DriveApp.getFolderById("...") và thay bằng ID Thư mục Drive của bạn.
 Bấm nút Lưu (hình đĩa mềm).
-Bấm nút Triển khai (Deploy) (màu xanh góc phải) $\rightarrow$ Tùy chọn triển khai mới.
+Bấm nút Triển khai (Deploy) (màu xanh góc phải) => Tùy chọn triển khai mới.
 Loại: Ứng dụng web (Web app).
 Mô tả: (Tùy ý).
 Thực hiện dưới tư cách: Tôi (Me).
@@ -42,7 +42,7 @@ Commit changes để lưu lại các thay đổi.
 
 + PHẦN 4: Kích Hoạt Robot Tự Động (GitHub Actions)
 Mục đích: Tự động đóng gói và xuất bản web mỗi khi có code mới.
-Tại trang chủ Repository, bấm Add file + Create new file.
+Tại trang chủ Repository, bấm Add file => Create new file.
 Đặt tên file chính xác là: .github/workflows/deploy.yml
 Dán nội dung sau vào:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -101,6 +101,6 @@ Tại phần Build and deployment Source: Chọn GitHub Actions.
 Chờ khoảng 2-3 phút.
 Vào tab Actions trên menu để xem tiến trình chạy. Khi nào hiện dấu tick màu xanh lá cây là xong.
 
-Quay lại Settings $\rightarrow$ Pages, bạn sẽ thấy đường link trang web hiện ra ở đầu trang.
+Quay lại Settings => Pages, bạn sẽ thấy đường link trang web hiện ra ở đầu trang.
 
-🎉 Hoàn tất! Web của bạn đã sẵn sàng sử dụng.
+Hoàn tất! Web của bạn đã sẵn sàng sử dụng.
