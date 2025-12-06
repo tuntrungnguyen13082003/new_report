@@ -14,7 +14,6 @@ Dán đè vào trang Google Script vừa mở.
 QUAN TRỌNG: Tìm dòng DriveApp.getFolderById("...") và thay bằng ID Thư mục Drive của bạn.
 Bấm nút Lưu (hình đĩa mềm).
 Bấm nút Triển khai (Deploy) (màu xanh góc phải) => Tùy chọn triển khai mới.
-cáccacsccscscsc
 Loại: Ứng dụng web (Web app).
 Mô tả: (Tùy ý).
 Thực hiện dưới tư cách: Tôi (Me).
